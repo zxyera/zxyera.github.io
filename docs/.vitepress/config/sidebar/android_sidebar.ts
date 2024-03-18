@@ -1,8 +1,8 @@
 export function androidSidebar() {
   return [
     {
-      text: "基础知识",
-      collapsed: true,
+      text: "安卓基础",
+      collapsed: false,
       items: [
         {
           text: "Activity",
@@ -18,8 +18,47 @@ export function androidSidebar() {
       ],
     },
     {
+      text: "Java基础",
+      collapsed: false,
+      items: [
+        {
+          text: "Java并发",
+          collapsed: false,
+          items: [
+            { text: "线程", link: "/android/java/线程" },
+            { text: "线程池", link: "/android/java/线程池" },
+            { text: "锁", link: "/android/java/锁" },
+          ],
+        },
+        {
+          text: "集合",
+          collapsed: false,
+          items: [
+            { text: "ArrayList", link: "/android/java/ArrayList" },
+            { text: "HashMap", link: "/android/java/HashMap" },
+          ],
+        },
+        {
+          text: "反射",
+          link: "/android/java/反射",
+        },
+        {
+          text: "注解",
+          link: "/android/java/注解",
+        },
+        {
+          text: "泛型",
+          link: "/android/java/泛型",
+        },
+        {
+          text: "JVM内存管理",
+          link: "/android/java/JVM内存管理",
+        },
+      ],
+    },
+    {
       text: "View & 动画",
-      collapsed: true,
+      collapsed: false,
       items: [
         {
           text: "旋转的指针",
@@ -28,44 +67,43 @@ export function androidSidebar() {
       ],
     },
     {
-      text: "开发笔记",
-      collapsed: true,
+      text: "Jetpack",
+      collapsed: false,
       items: [
         {
-          text: "BuildConfigField不生效",
-          link: "/android/note/BuildConfigField不生效",
+          text: "Lifecycle",
+          link: "/android/jetpack/Lifecycle",
         },
         {
-          text: "XML中给TabItem设置visibility无效",
-          link: "/android/note/XML中给TabItem设置visibility无效",
+          text: "ViewModel",
+          link: "/android/jetpack/ViewModel",
         },
         {
-          text: "Could not publish configuration archives",
-          link: "/android/note/Could not publish configuration archives",
+          text: "SavedStateHandle",
+          link: "/android/jetpack/SavedStateHandle",
         },
         {
-          text: "Kotlin not configured尝试方案",
-          link: "/android/note/Kotlin not configured尝试方案",
+          text: "LiveData",
+          link: "/android/jetpack/LiveData",
         },
+      ],
+    },
+    {
+      text: "Koltin",
+      collapsed: false,
+      items: [
         {
-          text: "Kotolin代码爆红",
-          link: "/android/note/Kotolin代码爆红",
+          text: "Kotlin标准库方法",
+          link: "android/kotlin/Kotlin标准库方法",
         },
+      ],
+    },
+    {
+      text: "开源三方库",
+      items: [
         {
-          text: "You have JVM property https.proxyHost set to 127.0.0.1",
-          link: "/android/note/You have JVM property https.proxyHost set to 127.0.0.1",
-        },
-        {
-          text: "fastjson解析kotlin数据类缺失默认构造器",
-          link: "/android/note/fastjson解析kotlin数据类缺失默认构造器",
-        },
-        {
-          text: "Gradle buildSrc进行库版本管理",
-          link: "/android/note/Gradle buildSrc进行库版本管理",
-        },
-        {
-          text: "kapt替换成ksp as没有了kapt",
-          link: "/android/note/kapt替换成ksp as没有了kapt",
+          text: "Arouter",
+          link: "/android/third/ARouter",
         },
       ],
     },

@@ -10,12 +10,15 @@ import {
   nav_compose,
   nav_flutter,
   nav_harmony,
+  nav_little_note,
   nav_navigation,
   nav_switch_dark_mode,
   nav_switch_light_mode,
   slide_article,
   slide_directory,
 } from "./strings";
+import { noteSidebar } from "./sidebar/note_sidebar";
+import { composeSidebar } from "./sidebar/compose_sidebar";
 
 export const themeConfig: DefaultTheme.Config = {
   lastUpdated: {
@@ -30,7 +33,7 @@ export const themeConfig: DefaultTheme.Config = {
   lightModeSwitchTitle: nav_switch_light_mode,
   externalLinkIcon: true, // 外链右侧是否显示小箭头图标
 
-  logo: "/logo.svg", // 存放到public目录下
+  logo: "/tiger_small.svg", // 存放到public目录下
   outline: {
     level: "deep",
     label: slide_directory,
@@ -64,9 +67,9 @@ export const themeConfig: DefaultTheme.Config = {
       link: "/harmonyos/",
     },
     {
-      text: nav_navigation,
-      activeMatch: "/naavigation/*",
-      link: "/naavigation/",
+      text: nav_little_note,
+      activeMatch: "/note/*",
+      link: "/note/BuildConfigField不生效",
     },
     {
       text: nav_navigation,
@@ -77,7 +80,8 @@ export const themeConfig: DefaultTheme.Config = {
 
   sidebar: {
     "/android/": androidSidebar(),
-    // "/android/note/": androidNoteSidebar(),
+    "/note/": noteSidebar(),
+    "/compose/": composeSidebar(),
   },
 
   search: {

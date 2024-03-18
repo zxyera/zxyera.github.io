@@ -14,7 +14,7 @@ Context 贯穿整个安卓系统，它是组件之间的纽带。
 ## 继承结构
 
 Context 是一个抽象类，提供了一系列的抽象方法，如 startActivity 等，具体实现都是在 ContextImpl 中。Context 有子类 Activity、Service、Application、ContextImpl、ContextWrapper、ContextThemeWrapper 等。它们的继承关如下：
-![alt text](../../images/context_extend_struct.png)
+![alt text](./../images/context_extend_struct.png)
 
 常用的 Activity、Service 以及 Application 中使用的方法都需要通过 ContextWrapper 来执行，然后真正执行的类是 ContextWrapper 的变量 mBase，mBase 是 Context 类型，但是实际上是 ContextImpl 类型。因此所有的操作都是在 ContextImpl 中被执行了。
 
@@ -24,7 +24,7 @@ mBase 在 ContextWrapper 的构造函数以及 attachBaseContext 被赋值，这
 
 ### Activity 创建
 
-![alt text](../../images/context_activity_create.png)
+![alt text](./../images/context_activity_create.png)
 在 performLaunchActivity 中调用 createBaseContextForActivity，然后再调用 ContextImpl 的静态方法 createActivityContext 创建出 ContextImpl 对象，该对象就是 ContextWrapper 中的 mBase 对象。
 
 紧接着调用 Instrumentation.newActivity 方法通过反射生成一个 Activity 对象，然后调用 Activity 的 attach 方法，将上一步创建的 ContextImpl 对象传进 attach 方法中，然后在 attach 方法中调用了 Activity 的 attachBaseContext 方法并把 ContextImpl 对象传入。

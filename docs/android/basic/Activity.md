@@ -31,7 +31,7 @@ Activity 的生命周期函数有 7 种：onCreate()、onStart()、onResume()、
 ### 生命周期状态流转图
 
 根据 7 个生命周期 7 个回调函数的定义可以将 Activity 分为 CREATED、STARTED、RESUMED、PAUSED、STOPPED、DESTROYED 这 6 种状态。
-![alt text](../../images/activity_status_turn.png)
+![alt text](./../images/activity_status_turn.png)
 
 ## 启动模式
 
@@ -42,22 +42,22 @@ standard（标准模式）、singleTask（栈内模式）、singleTop（栈顶�
 ### standard（标准模式）
 
 默认的一种模式，每次启动 activity 时都会在栈内新建一个该 activity 的实例，不管该 activity 是否启动过。
-![alt text](../../images/activity_mode_standard.png)
+![alt text](./../images/activity_mode_standard.png)
 
 ### singleInstance（单例模式）
 
 单独存放到一个独立的栈中，该栈中不能再放其它的 activity 实例了。
-![alt text](../../images/activity_mode_singleinstance.png)
+![alt text](./../images/activity_mode_singleinstance.png)
 
 ### singleTop（栈顶模式）
 
 要启动的 Activity 如果在栈顶就复用，否则新建一个。
-![alt text](../../images/activity_mode_singletop.png)
+![alt text](./../images/activity_mode_singletop.png)
 
 ### singleTask（栈内模式）
 
 不管是不是在栈顶，只要栈内有要启动 Activity 的实例都复用，并且会清空该实例上面的实例。是 singleTop 的升级版。
-![alt text](../../images/activity_mode_singletask.png)
+![alt text](./../images/activity_mode_singletask.png)
 
 ### singleInstancePerTask（栈内单例模式，安卓 12 新增）
 
@@ -66,7 +66,7 @@ standard（标准模式）、singleTask（栈内模式）、singleTop（栈顶�
 - 启动了该模式的 Activity，会新开一个栈，该栈只会存在一个该实例。但该实例只能在栈底
 - 再次启动该 Activity，会复用并移出它上面的所有实例，与 singleTask 特性一致
 - 搭配 FLAG_ACTIVITY_MULTIPLE_TASK 或 FLAG_ACTIVITY_NEW_DOCUMENT 使用可以在不同的栈新建不同的实例
-  ![alt text](../../images/activity_mode_singleinstancepertask.png)
+  ![alt text](./../images/activity_mode_singleinstancepertask.png)
 
 ### taskAffinity
 

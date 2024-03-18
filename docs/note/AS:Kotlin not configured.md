@@ -1,4 +1,4 @@
-# Kotlin not configured 尝试方案
+# AndroidStudio Kotlin not configured 尝试方案
 
 AndroidStudio Dolphin 版本提示 Kotlin not configured
 

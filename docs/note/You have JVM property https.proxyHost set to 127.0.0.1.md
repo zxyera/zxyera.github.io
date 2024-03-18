@@ -1,6 +1,6 @@
 # You have JVM property https.proxyHost set to 127.0.0.1
 
-![alt text](../images/jvmpropproxy127.png)
+![alt text](./images/jvmpropproxy127.png)
 
 编译时会提示 Can not resolve xxx
 

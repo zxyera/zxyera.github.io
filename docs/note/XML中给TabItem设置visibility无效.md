@@ -69,4 +69,4 @@ private TabView createTabView(@NonNull final Tab tab) {
 上面三个核心方法，先通过 newTab 创建一个 Tab，Tab 是 TabLayout 的静态内部类，其内部有属性 text、icon、customView 和 view 等。在创建 Tab 的同时，也通过 createTabView 方法创建出了一个 TabView 并设置给了 Tab 的 view 属性。Tab 创建好之后，又从 TabItem 中取出 text 和 icon 设置给 Tab，此时 Tab 已经有了文本 text、图标 icon 以及 TabView。
 
 其实 TabLayout 真正显示在界面上的就是这个 TabView 而不是在 XML 中设置的 TabItem。因为 TabItem 并没有被添加到 View 的控件树中，所以设置 visibility 属性是无效的。
-![alt text](../images/tabitemsetvisibleinvalid_flowchat.png)
+![alt text](./images/tabitemsetvisibleinvalid_flowchat.png)

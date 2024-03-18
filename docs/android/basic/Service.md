@@ -150,4 +150,4 @@ class MyService : Service() {
 
 ## 生命周期
 
-![alt text](../../images/service_lifecycle.png)
+![alt text](./../images/service_lifecycle.png)

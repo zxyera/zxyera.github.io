@@ -38,7 +38,7 @@ repositories {
 
 再创建一个 kt 类
 
-![alt text](../images/gradlebuildsrc.png)
+![alt text](./images/gradlebuildsrc.png)
 
 使用
 

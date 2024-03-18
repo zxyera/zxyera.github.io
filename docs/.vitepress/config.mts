@@ -8,6 +8,10 @@ export default defineConfig({
   description: global_description,
   // logo设置图标
   themeConfig: themeConfig,
+  markdown: {
+    lineNumbers: true,
+  },
+  cleanUrls: true, // 不显示url尾部的.html
   head: [
     [
       "link",

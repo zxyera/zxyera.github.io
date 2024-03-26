@@ -85,9 +85,10 @@ T 对象的扩展方法，和 also 一样，block 参数也是以参数的形式
 ## 对比
 
 假设对于往 Bundle 中添加数据并返回 Bundle 对象的需求，以下是每个方法的实现方式
-::: info run
 
-```kotlin
+::: code-group
+
+```kotlin [run]
 val r1: Bundle = kotlin.run {
     val bundle = Bundle()
     bundle.putString("name", "n")
@@ -96,11 +97,7 @@ val r1: Bundle = kotlin.run {
 }
 ```
 
-:::
-
-::: info T.run
-
-```kotlin
+```kotlin [T.run]
 val r2: Bundle = Bundle().run {
     putString("name", "n")
     putString("psd", "p")
@@ -108,10 +105,7 @@ val r2: Bundle = Bundle().run {
 }
 ```
 
-:::
-::: info with
-
-```kotlin
+```kotlin [with]
 val r3: Bundle = with(Bundle()) {
     putString("name", "n")
     putString("psd", "p")
@@ -119,30 +113,21 @@ val r3: Bundle = with(Bundle()) {
 }
 ```
 
-:::
-::: info T.apply
-
-```kotlin
+```kotlin [apply]
 val r4: Bundle = Bundle().apply {
     putString("name", "n")
     putString("psd", "p")
 }
 ```
 
-:::
-::: info T.also
-
-```kotlin
+```kotlin [also]
 val r5: Bundle = Bundle().also {
     it.putString("name", "n")
     it.putString("psd", "p")
 }
 ```
 
-:::
-::: info T.let
-
-```kotlin
+```kotlin [let]
 val r6: Bundle = Bundle().let {
     it.putString("name", "n")
     it.putString("psd", "p")

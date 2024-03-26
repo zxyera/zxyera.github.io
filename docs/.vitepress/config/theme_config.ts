@@ -19,6 +19,8 @@ import {
 } from "./strings";
 import { noteSidebar } from "./sidebar/note_sidebar";
 import { composeSidebar } from "./sidebar/compose_sidebar";
+import { harmonySidebar } from "./sidebar/harmony_sidebar";
+import { navigationSidebar } from "./sidebar/navigation_sidebar";
 
 export const themeConfig: DefaultTheme.Config = {
   lastUpdated: {
@@ -28,17 +30,16 @@ export const themeConfig: DefaultTheme.Config = {
       timeStyle: "short",
     },
   },
-
+  i18nRouting: false,
   darkModeSwitchTitle: nav_switch_dark_mode,
   lightModeSwitchTitle: nav_switch_light_mode,
-  externalLinkIcon: true, // 外链右侧是否显示小箭头图标
+  externalLinkIcon: false, // 外链右侧是否显示小箭头图标
 
   logo: "/tiger_small.svg", // 存放到public目录下
   outline: {
     level: "deep",
     label: slide_directory,
   },
-
   sidebarMenuLabel: slide_article,
   returnToTopLabel: footer_return_top,
   lastUpdatedText: footer_latest_update_time,
@@ -73,8 +74,8 @@ export const themeConfig: DefaultTheme.Config = {
     },
     {
       text: nav_navigation,
-      activeMatch: "/naavigation/*",
-      link: "/naavigation/",
+      activeMatch: "/navigation/*",
+      link: "/navigation/",
     },
   ],
 
@@ -82,6 +83,7 @@ export const themeConfig: DefaultTheme.Config = {
     "/android/": androidSidebar(),
     "/note/": noteSidebar(),
     "/compose/": composeSidebar(),
+    "/harmonyos/": harmonySidebar(),
   },
 
   search: {

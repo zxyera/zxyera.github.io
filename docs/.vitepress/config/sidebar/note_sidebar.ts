@@ -16,7 +16,7 @@ export function noteSidebar() {
               link: "/note/Kotolin代码爆红",
             },
             {
-              text: "You have JVM property https.proxyHost set to 127.0.0.1",
+              text: "AS报代理127错误",
               link: "/note/You have JVM property https.proxyHost set to 127.0.0.1",
             },
           ],
@@ -30,7 +30,7 @@ export function noteSidebar() {
               link: "/note/BuildConfigField不生效",
             },
             {
-              text: "XML中给TabItem设置visibility无效",
+              text: "TabItem设置visibility无效",
               link: "/note/XML中给TabItem设置visibility无效",
             },
             {
@@ -42,7 +42,7 @@ export function noteSidebar() {
               link: "/note/fastjson解析kotlin数据类缺失默认构造器",
             },
             {
-              text: "Gradle buildSrc进行库版本管理",
+              text: "buildSrc进行库版本管理",
               link: "/note/Gradle buildSrc进行库版本管理",
             },
           ],
@@ -57,7 +57,7 @@ export function noteSidebar() {
           collapsed: false,
           items: [
             {
-              text: "kapt替换成ksp as没有了kapt",
+              text: "kapt升级为ksp",
               link: "/note/kapt替换成ksp as没有了kapt",
             },
           ],

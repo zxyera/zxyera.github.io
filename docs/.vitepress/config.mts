@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 import { themeConfig } from "./config/theme_config";
 import { global_description, global_title } from "./config/strings";
+import MarkdownPreview from "vite-plugin-markdown-preview";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -10,8 +11,9 @@ export default defineConfig({
   themeConfig: themeConfig,
   markdown: {
     lineNumbers: true,
+    math: true,
   },
-  cleanUrls: true, // 不显示url尾部的.html
+  cleanUrls: false, // 不显示url尾部的.html
   head: [
     [
       "link",
@@ -27,4 +29,8 @@ export default defineConfig({
       },
     ],
   ],
+
+  vite: {
+    plugins: [MarkdownPreview()],
+  },
 });

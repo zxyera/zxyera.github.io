@@ -24,7 +24,7 @@ export function harmonySidebar() {
             },
             {
               text: "通用事件",
-              link: "",
+              link: "/harmonyos/arkui/通用事件",
             },
             {
               text: "手势处理",

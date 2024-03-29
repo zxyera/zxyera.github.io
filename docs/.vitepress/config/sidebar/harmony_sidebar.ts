@@ -28,7 +28,7 @@ export function harmonySidebar() {
             },
             {
               text: "手势处理",
-              link: "",
+              link: "/harmonyos/arkui/手势处理",
             },
           ],
         },
@@ -38,7 +38,7 @@ export function harmonySidebar() {
           items: [
             {
               text: "Text",
-              link: "",
+              link: "/harmonyos/arkui/Text",
             },
             {
               text: "TextInput",

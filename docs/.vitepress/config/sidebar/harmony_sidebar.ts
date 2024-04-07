@@ -41,12 +41,8 @@ export function harmonySidebar() {
               link: "/harmonyos/arkui/Text",
             },
             {
-              text: "TextInput",
-              link: "",
-            },
-            {
-              text: "TextArea",
-              link: "",
+              text: "TextInpu/TextArea",
+              link: "/harmonyos/arkui/输入框",
             },
             {
               text: "Button",

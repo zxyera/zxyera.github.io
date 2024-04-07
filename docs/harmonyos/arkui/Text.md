@@ -8,7 +8,7 @@ Text((content?: string | Resource, value?: TextOptions))
 
 `content` 传入显示的文本，可以是字符串字面量以及字符串类型的资源类型。 `value` 中可以设置 `TextController` 。
 
-## 文本属性
+## 属性
 
 ### 字体颜色
 
@@ -121,4 +121,179 @@ Text("letter spacing").letterSpacing(10);
 
 ![alt text](../images/text_letterspacing.png)
 
+### 大小写
 
+`textCase` 设置文本大小写
+
+```ts
+Text("Text Case").textCase(TextCase.LowerCase);
+
+declare enum TextCase {
+  Normal,
+  LowerCase,
+  UpperCase,
+}
+```
+
+### 文本复制
+
+`copyOption` 设置文本是否可以复制粘贴。
+
+```ts
+Text("copyOption").copyOption(CopyOptions.InApp);
+
+declare enum CopyOptions {
+  None = 0, // 不允许复制粘贴，长按不会弹出文本选择框
+  InApp = 1, // 允许在App内复制粘贴
+  LocalDevice = 2, // 运行在当前设备中复制粘贴
+  CROSS_DEVICE = 3, // 可以跨设备复制粘贴
+}
+```
+
+### 文本拖拽
+
+`draggable` 设置文本拖拽效果，需要搭配 `copyOption` 一起使用。以为需要先选中文本，然后再次按下时可以将选中的文本拖走。
+
+```ts
+Text("DRAGGABLE")
+  .border({ width: 1, color: Color.Gray })
+  .height(50)
+  .copyOption(CopyOptions.LocalDevice) // [!code focus]
+  .draggable(true); // [!code focus]
+```
+
+![alt text](../images/text_draggable.gif)
+
+### 文字阴影
+
+`textShadow` 设置文字阴影效果。
+
+```ts
+textShadow(value: ShadowOptions | Array<ShadowOptions>): TextAttribute;
+
+declare interface ShadowOptions {
+  radius: number | Resource; // 阴影圆角
+  type?: ShadowType; // 阴影类型，颜色/模糊
+  color?: Color | string | Resource | ColoringStrategy; // 阴影颜色
+  offsetX?: number | Resource; // 阴影水平偏移量
+  offsetY?: number | Resource; // 阴影竖直偏移量
+  fill?: boolean; // 是否填充区域
+}
+```
+
+参数可以是 `ShadowOptions` 类型或者是数组类型，当是数组时，表示可以设置多种阴影叠加。
+
+```ts
+Text("Text Shadow").height(50).textShadow({
+  radius: 10,
+  type: ShadowType.COLOR,
+  color: Color.Red,
+  offsetX: 10,
+  offsetY: 10,
+});
+```
+
+![alt text](../images/text_shadow.png)
+
+### 首行缩进
+
+`textIntent` 首行缩进。
+
+### 文本选中区域
+
+`selection` 设置文本选中区域，选中的区域文本会高亮且有拖动菜单。必须和 `copyOption` 搭配使用，并且不能设置成 `CopyOptions.None`。点击空白地方会取消选中。
+
+```ts
+Text("Text Selection")
+  .height(50)
+  .copyOption(CopyOptions.InApp) // 不能设置成None
+  .selection(3, 8); // 从文本内容索引为 【3 ~ 8) 的字符选中
+```
+
+![alt text](../images/text_selection.png)
+
+### 自定义选择菜单
+
+`bindSelectionMenu` 设置自定义选择菜单，长按 Text 弹出的菜单，需要设置属性 `copyOption`，否则无效。参数 `content: CustomBuilder` 使用使用 `Menu` 和 `MenuItem`。
+
+```ts
+bindSelectionMenu(spanType: TextSpanType, content: CustomBuilder, responseType: TextResponseType, options?: SelectionMenuOptions): TextAttribute;
+```
+
+```ts
+Text("Text Selection")
+  .height(50)
+  .copyOption(CopyOptions.InApp)
+  .bindSelectionMenu(
+    TextSpanType.TEXT,
+    this.buildSelectMenu(),
+    TextResponseType.LONG_PRESS
+  );
+
+
+@Builder
+buildSelectMenu() {
+  Row() {
+    Menu() {
+      MenuItem({ content: '复制' })
+      MenuItem({ content: '粘贴' })
+      MenuItem({ content: '剪切' })
+    }
+  }.border({ width: 1, color: Color.Gray })
+}
+```
+
+![alt text](../images/text_bindselectionmenu.png)
+
+## 事件
+
+其它事件见[通用事件](./通用事件.md)
+
+### 拷贝
+
+复制文本时回调
+
+```ts
+Text("copy").onCopy((value) => {}); // value是拷贝的文本
+```
+
+### 文本选择
+
+文本选中的位置发生变化时触发回调
+
+```ts
+Text("BindSelectionMenu")
+  .height(50)
+  .copyOption(CopyOptions.InApp)
+  .onTextSelectionChange((start, end) => {
+    // start：选中文本开始位置（包含），end：选中文本结束位置（不包含）
+  });
+```
+
+## 文本控制器
+
+文本控制器可以关闭弹出的菜单，比如长按 Text 弹出自定义的菜单，点击菜单项需要关闭菜单，就需要使用文本控制器来关闭菜单。
+
+```ts
+Text("TextController", { controller: this.controller }) // [!code focus] 传入controller对象
+  .height(50)
+  .copyOption(CopyOptions.InApp)
+  .bindSelectionMenu(
+    TextSpanType.TEXT,
+    this.buildSelectMenu(),
+    TextResponseType.LONG_PRESS
+  );
+
+@Builder
+buildSelectMenu() {
+  Row() {
+    Menu() {
+      MenuItem({ content: '复制' }).onClick(() => {
+        this.controller.closeSelectionMenu() // [!code focus] 关闭菜单
+      })
+      MenuItem({ content: '粘贴' })
+      MenuItem({ content: '剪切' })
+    }
+  }.border({ width: 1, color: Color.Gray })
+}
+```

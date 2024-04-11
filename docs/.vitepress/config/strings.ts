@@ -1,10 +1,10 @@
 // 导航
-export const nav_android = "Android";
+export const nav_android = "安卓知识体系";
 export const nav_flutter = "Flutter";
 export const nav_little_note = "小笔记";
-export const nav_harmony = "HarmonyOS";
+export const nav_harmony = "鸿蒙应用开发";
 export const nav_compose = "Compose";
-export const nav_navigation = "导航";
+export const nav_navigation = "资源导航";
 export const nav_switch_dark_mode = "切换到深色模式";
 export const nav_switch_light_mode = "切换到浅色模式";
 // 侧边栏

@@ -46,7 +46,7 @@ export function harmonySidebar() {
             },
             {
               text: "Button",
-              link: "",
+              link: "/harmonyos/arkui/Button",
             },
             {
               text: "Image",

@@ -59,7 +59,7 @@ export function harmonySidebar() {
             },
             {
               text: "ImageSpan",
-              link: "",
+              link: `${baseHarmony}ImageSpan`,
             },
             {
               text: "CheckBox",

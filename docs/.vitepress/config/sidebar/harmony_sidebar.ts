@@ -1,4 +1,5 @@
 export function harmonySidebar() {
+  const baseHarmony = "/harmonyos/arkui/";
   return [
     {
       text: "TypeScript",
@@ -20,15 +21,15 @@ export function harmonySidebar() {
           items: [
             {
               text: "通用属性",
-              link: "/harmonyos/arkui/通用属性",
+              link: `${baseHarmony}通用属性`,
             },
             {
               text: "通用事件",
-              link: "/harmonyos/arkui/通用事件",
+              link: `${baseHarmony}通用事件`,
             },
             {
               text: "手势处理",
-              link: "/harmonyos/arkui/手势处理",
+              link: `${baseHarmony}手势处理`,
             },
           ],
         },
@@ -38,23 +39,23 @@ export function harmonySidebar() {
           items: [
             {
               text: "Text",
-              link: "/harmonyos/arkui/Text",
+              link: `${baseHarmony}Text`,
             },
             {
               text: "TextInpu/TextArea",
-              link: "/harmonyos/arkui/输入框",
+              link: `${baseHarmony}输入框`,
             },
             {
               text: "Button",
-              link: "/harmonyos/arkui/Button",
+              link: `${baseHarmony}Button`,
             },
             {
               text: "Image",
-              link: "",
+              link: `${baseHarmony}Image`,
             },
             {
               text: "ImageAnimator",
-              link: "",
+              link: `${baseHarmony}ImageAnimator`,
             },
             {
               text: "ImageSpan",
@@ -130,7 +131,7 @@ export function harmonySidebar() {
             },
             {
               text: "Search",
-              link: "/harmonyos/arkui/搜索框Search",
+              link: "${baseHarmony}搜索框Search",
             },
             {
               text: "Radio",
@@ -440,7 +441,7 @@ export function harmonySidebar() {
               items: [
                 {
                   text: "元素共享转场动画",
-                  link: "/harmonyos/arkui/转场动画-元素共享动画",
+                  link: "${baseHarmony}转场动画-元素共享动画",
                 },
               ],
             },

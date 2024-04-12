@@ -13,7 +13,7 @@ export default defineConfig({
     lineNumbers: true,
     math: true,
   },
-  cleanUrls: false, // 不显示url尾部的.html
+  cleanUrls: true, // 不显示url尾部的.html
   head: [
     [
       "link",

@@ -63,7 +63,7 @@ export function harmonySidebar() {
             },
             {
               text: "CheckBox",
-              link: "",
+              link: `${baseHarmony}CheckBox`,
             },
             {
               text: "Divider",

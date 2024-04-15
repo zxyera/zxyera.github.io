@@ -89,13 +89,13 @@ build(){
 
 @Builder
 checkboxGroup() {
-Row() {
-    CheckboxGroup({ group: 'group' })
-    .onChange((event) => {
-        console.log(`${event.status} - ${event.name}`)
-    })
-    Text('全选')
-}
+    Row() {
+        CheckboxGroup({ group: 'group' })
+        .onChange((event) => {
+            console.log(`${event.status} - ${event.name}`)
+        })
+        Text('全选')
+    }
 }
 
 @Builder

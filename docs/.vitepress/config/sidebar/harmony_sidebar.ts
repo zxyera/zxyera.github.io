@@ -7,11 +7,7 @@ export function harmonySidebar() {
     },
     {
       text: "ArkTS",
-      items: [
-        {
-          text: "Gradle",
-        },
-      ],
+      items: [],
     },
     {
       text: "ArkUI",
@@ -67,19 +63,19 @@ export function harmonySidebar() {
             },
             {
               text: "Divider",
-              link: "",
+              link: `${baseHarmony}Divider`,
             },
             {
               text: "LoadingProgress",
-              link: "",
+              link: `${baseHarmony}LoadingProgress`,
             },
             {
               text: "Progress",
-              link: "",
+              link: `${baseHarmony}Progress`,
             },
             {
               text: "Menu",
-              link: "",
+              link: `${baseHarmony}Menu`,
             },
             {
               text: "TextClock",

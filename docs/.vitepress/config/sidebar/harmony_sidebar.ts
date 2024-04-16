@@ -79,7 +79,7 @@ export function harmonySidebar() {
             },
             {
               text: "TextClock",
-              link: "",
+              link: `${baseHarmony}TextClock`,
             },
             {
               text: "TextTimer",

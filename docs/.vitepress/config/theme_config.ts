@@ -53,15 +53,15 @@ export const themeConfig: DefaultTheme.Config = {
       activeMatch: "/android/*",
       link: "/android/basic/Activity",
     },
-    {
-      text: nav_compose,
-      link: "/compose/",
-    },
-    {
-      text: nav_flutter,
-      activeMatch: "/flutter/*",
-      link: "/flutter/",
-    },
+    // {
+    //   text: nav_compose,
+    //   link: "/compose/",
+    // },
+    // {
+    //   text: nav_flutter,
+    //   activeMatch: "/flutter/*",
+    //   link: "/flutter/",
+    // },
     {
       text: nav_harmony,
       activeMatch: "/harmonyos/*",

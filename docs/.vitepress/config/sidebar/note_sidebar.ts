@@ -19,6 +19,10 @@ export function noteSidebar() {
               text: "AS报代理127错误",
               link: "/note/You have JVM property https.proxyHost set to 127.0.0.1",
             },
+            {
+              text: "Git没有Local Changes面板",
+              link: "/note/AndroidStudio的git不显示local changes面板",
+            },
           ],
         },
         {

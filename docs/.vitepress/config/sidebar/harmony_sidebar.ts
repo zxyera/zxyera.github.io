@@ -83,6 +83,14 @@ export function harmonySidebar() {
             },
             {
               text: "TextTimer",
+              link: `${baseHarmony}TextTimer`,
+            },
+            {
+              text: "TimePicker",
+              link: "",
+            },
+            {
+              text: "TextPicker",
               link: "",
             },
             {
@@ -91,10 +99,6 @@ export function harmonySidebar() {
             },
             {
               text: "Slider",
-              link: "",
-            },
-            {
-              text: "TimePicker",
               link: "",
             },
             {
@@ -119,10 +123,6 @@ export function harmonySidebar() {
             },
             {
               text: "ScrollBar",
-              link: "",
-            },
-            {
-              text: "TextPicker",
               link: "",
             },
             {

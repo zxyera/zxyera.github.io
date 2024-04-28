@@ -14,6 +14,7 @@ export function harmonySidebar() {
       items: [
         {
           text: "组件通用信息",
+          collapsed: true,
           items: [
             {
               text: "通用属性",
@@ -87,7 +88,11 @@ export function harmonySidebar() {
             },
             {
               text: "TimePicker",
-              link: "",
+              link: `${baseHarmony}TimePicker`,
+            },
+            {
+              text: "DatePicker",
+              link: `${baseHarmony}DatePicker`,
             },
             {
               text: "TextPicker",
@@ -285,6 +290,7 @@ export function harmonySidebar() {
         },
         {
           text: "画布组件",
+          collapsed: true,
           items: [
             {
               text: "Cavas",

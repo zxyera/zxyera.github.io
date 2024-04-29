@@ -96,7 +96,7 @@ export function harmonySidebar() {
             },
             {
               text: "TextPicker",
-              link: "",
+              link: `${baseHarmony}TextPicker`,
             },
             {
               text: "Toggle",

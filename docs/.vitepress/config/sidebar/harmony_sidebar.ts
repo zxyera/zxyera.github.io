@@ -100,11 +100,11 @@ export function harmonySidebar() {
             },
             {
               text: "Toggle",
-              link: "",
+              link: `${baseHarmony}Toggle`,
             },
             {
               text: "Slider",
-              link: "",
+              link: `${baseHarmony}Slider`,
             },
             {
               text: "Stepper",

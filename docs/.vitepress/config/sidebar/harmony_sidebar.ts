@@ -1,5 +1,8 @@
+import { text } from "cheerio/lib/static";
+
 export function harmonySidebar() {
-  const baseHarmony = "/harmonyos/arkui/";
+  const baseHarmonyArkUI = "/harmonyos/arkui/";
+  const baseHarmonyRecord = "/harmonyos/record/";
   return [
     {
       text: "TypeScript",
@@ -18,15 +21,15 @@ export function harmonySidebar() {
           items: [
             {
               text: "通用属性",
-              link: `${baseHarmony}通用属性`,
+              link: `${baseHarmonyArkUI}通用属性`,
             },
             {
               text: "通用事件",
-              link: `${baseHarmony}通用事件`,
+              link: `${baseHarmonyArkUI}通用事件`,
             },
             {
               text: "手势处理",
-              link: `${baseHarmony}手势处理`,
+              link: `${baseHarmonyArkUI}手势处理`,
             },
           ],
         },
@@ -36,87 +39,87 @@ export function harmonySidebar() {
           items: [
             {
               text: "Text",
-              link: `${baseHarmony}Text`,
+              link: `${baseHarmonyArkUI}Text`,
             },
             {
               text: "TextInpu/TextArea",
-              link: `${baseHarmony}输入框`,
+              link: `${baseHarmonyArkUI}输入框`,
             },
             {
               text: "Button",
-              link: `${baseHarmony}Button`,
+              link: `${baseHarmonyArkUI}Button`,
             },
             {
               text: "Image",
-              link: `${baseHarmony}Image`,
+              link: `${baseHarmonyArkUI}Image`,
             },
             {
               text: "ImageAnimator",
-              link: `${baseHarmony}ImageAnimator`,
+              link: `${baseHarmonyArkUI}ImageAnimator`,
             },
             {
               text: "ImageSpan",
-              link: `${baseHarmony}ImageSpan`,
+              link: `${baseHarmonyArkUI}ImageSpan`,
             },
             {
               text: "CheckBox",
-              link: `${baseHarmony}CheckBox`,
+              link: `${baseHarmonyArkUI}CheckBox`,
             },
             {
               text: "Divider",
-              link: `${baseHarmony}Divider`,
+              link: `${baseHarmonyArkUI}Divider`,
             },
             {
               text: "LoadingProgress",
-              link: `${baseHarmony}LoadingProgress`,
+              link: `${baseHarmonyArkUI}LoadingProgress`,
             },
             {
               text: "Progress",
-              link: `${baseHarmony}Progress`,
+              link: `${baseHarmonyArkUI}Progress`,
             },
             {
               text: "Menu",
-              link: `${baseHarmony}Menu`,
+              link: `${baseHarmonyArkUI}Menu`,
             },
             {
               text: "TextClock",
-              link: `${baseHarmony}TextClock`,
+              link: `${baseHarmonyArkUI}TextClock`,
             },
             {
               text: "TextTimer",
-              link: `${baseHarmony}TextTimer`,
+              link: `${baseHarmonyArkUI}TextTimer`,
             },
             {
               text: "TimePicker",
-              link: `${baseHarmony}TimePicker`,
+              link: `${baseHarmonyArkUI}TimePicker`,
             },
             {
               text: "DatePicker",
-              link: `${baseHarmony}DatePicker`,
+              link: `${baseHarmonyArkUI}DatePicker`,
             },
             {
               text: "TextPicker",
-              link: `${baseHarmony}TextPicker`,
+              link: `${baseHarmonyArkUI}TextPicker`,
             },
             {
               text: "Toggle",
-              link: `${baseHarmony}Toggle`,
+              link: `${baseHarmonyArkUI}Toggle`,
             },
             {
               text: "Slider",
-              link: `${baseHarmony}Slider`,
+              link: `${baseHarmonyArkUI}Slider`,
             },
             {
               text: "Stepper",
-              link: "",
+              link: `${baseHarmonyArkUI}Stepper`,
             },
             {
               text: "Span",
-              link: "",
+              link: `${baseHarmonyArkUI}Span`,
             },
             {
               text: "Select",
-              link: "",
+              link: ``,
             },
             {
               text: "RickText",
@@ -132,7 +135,7 @@ export function harmonySidebar() {
             },
             {
               text: "Search",
-              link: "${baseHarmony}搜索框Search",
+              link: `${baseHarmonyArkUI}搜索框Search`,
             },
             {
               text: "Radio",
@@ -443,7 +446,7 @@ export function harmonySidebar() {
               items: [
                 {
                   text: "元素共享转场动画",
-                  link: "${baseHarmony}转场动画-元素共享动画",
+                  link: "${baseHarmonyArkUI}转场动画-元素共享动画",
                 },
               ],
             },
@@ -482,6 +485,15 @@ export function harmonySidebar() {
               link: "",
             },
           ],
+        },
+      ],
+    },
+    {
+      text: "笔记记录",
+      items: [
+        {
+          text: "编译鸿蒙版本WebRTC",
+          link: `${baseHarmonyRecord}编译鸿蒙版本WebRTC`,
         },
       ],
     },

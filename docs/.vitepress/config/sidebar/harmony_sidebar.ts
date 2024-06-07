@@ -151,7 +151,7 @@ export function harmonySidebar() {
             },
             {
               text: "QRCode",
-              link: "",
+              link: `${baseHarmonyArkUI}QRCode`,
             },
             {
               text: "Navigation",

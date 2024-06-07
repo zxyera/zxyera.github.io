@@ -119,14 +119,14 @@ export function harmonySidebar() {
             },
             {
               text: "Select",
-              link: ``,
+              link: `${baseHarmonyArkUI}Select`,
             },
             {
-              text: "RickText",
+              text: "RichText",
               link: "",
             },
             {
-              text: "RickEditor",
+              text: "RichEditor",
               link: "",
             },
             {

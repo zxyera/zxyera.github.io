@@ -1,6 +1,6 @@
 # BuildConfigField 不生效
 
-```typescript
+```goovy
 android {
     defaultConfig {
         buildConfigField "boolean", "RUN_DEMO_MODE", "${runDemo}"

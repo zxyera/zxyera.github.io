@@ -2,7 +2,7 @@
 
 ## JVM 内存结构
 
-![JVM内存结构](./../images/jvmmemmanage_memstruct.png)
+![JVM内存结构](../../android/images/jvmmemmanage_memstruct.png)
 
 ## 程序计数器
 

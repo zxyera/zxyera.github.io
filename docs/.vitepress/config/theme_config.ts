@@ -6,10 +6,12 @@ import {
   footer_next_page,
   footer_prev_page,
   footer_return_top,
+  nav_algorithm,
   nav_android,
   nav_compose,
   nav_flutter,
   nav_harmony,
+  nav_java,
   nav_little_note,
   nav_navigation,
   nav_switch_dark_mode,
@@ -18,9 +20,10 @@ import {
   slide_directory,
 } from "./strings";
 import { noteSidebar } from "./sidebar/note_sidebar";
-import { composeSidebar } from "./sidebar/compose_sidebar";
 import { harmonySidebar } from "./sidebar/harmony_sidebar";
 import { navigationSidebar } from "./sidebar/navigation_sidebar";
+import { javaSidebar } from "./sidebar/java_sidebar";
+import { algorithmSidebar } from "./sidebar/algorithm_sidebar";
 
 export const themeConfig: DefaultTheme.Config = {
   lastUpdated: {
@@ -68,6 +71,16 @@ export const themeConfig: DefaultTheme.Config = {
       link: "/harmonyos/",
     },
     {
+      text: nav_java,
+      activeMatch: "/java/*",
+      link: "/java/",
+    },
+    {
+      text: nav_algorithm,
+      activeMatch: "/algorithm/*",
+      link: "/algorithm/",
+    },
+    {
       text: nav_little_note,
       activeMatch: "/note/*",
       link: "/note/BuildConfigField不生效",
@@ -82,8 +95,9 @@ export const themeConfig: DefaultTheme.Config = {
   sidebar: {
     "/android/": androidSidebar(),
     "/note/": noteSidebar(),
-    "/compose/": composeSidebar(),
     "/harmonyos/": harmonySidebar(),
+    "/java/": javaSidebar(),
+    algorithm: algorithmSidebar(),
   },
 
   search: {

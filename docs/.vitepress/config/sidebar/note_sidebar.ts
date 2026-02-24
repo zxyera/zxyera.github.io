@@ -28,28 +28,7 @@ export function noteSidebar() {
         {
           text: "开发代码问题",
           collapsed: false,
-          items: [
-            {
-              text: "BuildConfigField不生效",
-              link: "/note/BuildConfigField不生效",
-            },
-            {
-              text: "TabItem设置visibility无效",
-              link: "/note/XML中给TabItem设置visibility无效",
-            },
-            {
-              text: "Could not publish configuration archives",
-              link: "/note/Could not publish configuration archives",
-            },
-            {
-              text: "fastjson解析kotlin数据类缺失默认构造器",
-              link: "/note/fastjson解析kotlin数据类缺失默认构造器",
-            },
-            {
-              text: "buildSrc进行库版本管理",
-              link: "/note/Gradle buildSrc进行库版本管理",
-            },
-          ],
+          items: developQuestions,
         },
       ],
     },
@@ -70,3 +49,26 @@ export function noteSidebar() {
     },
   ];
 }
+
+const developQuestions = [
+  {
+    text: "BuildConfigField不生效",
+    link: "/note/BuildConfigField不生效",
+  },
+  {
+    text: "TabItem设置visibility无效",
+    link: "/note/XML中给TabItem设置visibility无效",
+  },
+  {
+    text: "Could not publish configuration archives",
+    link: "/note/Could not publish configuration archives",
+  },
+  {
+    text: "fastjson解析kotlin数据类缺失默认构造器",
+    link: "/note/fastjson解析kotlin数据类缺失默认构造器",
+  },
+  {
+    text: "buildSrc进行库版本管理",
+    link: "/note/Gradle buildSrc进行库版本管理",
+  },
+];

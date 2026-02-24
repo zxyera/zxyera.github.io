@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "ZXYERA"
-  text: 时光定不负你付出的点点滴滴
+  text: HELLO WORLD
   tagline: 积累点滴 记录成长
   image:
     src: tiger_large.png
